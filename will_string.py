@@ -5,4 +5,4 @@ def cut(input):
       return input[:4]
 
 def Over18(age):
-      return age - 18
+      return (age - 18)
