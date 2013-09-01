@@ -1,0 +1,8 @@
+import pprint
+import time
+
+data = open('doc', 'r'
+for info in data:
+      pprint.pprint(data)
+
+
