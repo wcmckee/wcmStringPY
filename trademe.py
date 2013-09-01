@@ -5,7 +5,6 @@ from pprint import pprint
 from clint.textui import puts, colored
 
 def rectxt():
-    files = open('doc', 'w')
     categ  = input('Which number: ')
     r2 = requests.get('http://api.trademe.co.nz/v1/Search/General.json?category=' + categ + '&sort_order=BidsMost')
  
@@ -35,6 +34,13 @@ def rectxt():
          #pprint(ContentRegion)
          puts(colored.green(ContentRegion))
          pprint(ContentBuyNow)
- 
-        
+         files = open('doc', 'w')
+         files.write('[')
+         files.write(ContentTitle)
+         files.write(', ') 
+         files.write(ContentBuyNow)
+         files.write(', ')
+         files.write(ContentRegion)
+         files.write(']')
+         files.close()
 rectxt()
