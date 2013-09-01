@@ -20,9 +20,15 @@ def rectxt():
          ContentAuthor = info[u'data'][u'title']
          ContentAuthor = str(ContentAuthor)
          
-    
+         ContentScore = info[u'data'][u'score']
+         ContentScore = str(ContentScore)
+         
+         ContentUrl = info[u'data'][u'url']
+         
          pprint(ContentText)
          pprint(ContentAuthor)
+         pprint(ContentScore)
+         pprint(ContentUrl)
  
         
 rectxt()
