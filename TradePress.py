@@ -5,12 +5,19 @@ import pprint
 
 PriceInfo = open('doc', 'r')
 for Result in PriceInfo:
-        pprint.pprint(Result)
+     pprint.pprint(Result)
 
 wp = Client('http://wcmckee.com/xmlrpc.php', 'wcmckee', 'blahblah123')
 Posts = wp.call(GetPosts())
 for data in Posts:
-      pprint.pprint(data)
+     pprint.pprint(data)
 
-#post = WordPressPost()
-#post.title = 
+post = WordPressPost()
+post.title = (Result)
+post.content = ('testing 123')
+post.terms_names = {
+     'post_tag': ['trademe', 'dataprocess', 'python'],
+     'category': ['trademe']
+}
+
+wp.call(NewPost(post)) 

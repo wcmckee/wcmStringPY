@@ -30,6 +30,9 @@ def rectxt():
          ContentBuyNow = info[u'PriceDisplay']
          ContentBuyNow = str(ContentBuyNow)
          
+         ContentSuburb = info[u'Suburb']
+         ContentSuburb = str(ContentSuburb)
+         
          #pprint(ContentTitle)
          puts(colored.red(ContentTitle))
          #pprint(ContentPath)
@@ -44,6 +47,8 @@ def rectxt():
          files.write(ContentBuyNow)
          files.write(', ')
          files.write(ContentRegion)
+         files.write(', ')
+         files.write(ContentSuburb)
          files.write(']')
          files.close()
 rectxt()
