@@ -15,7 +15,8 @@ class StringTests(unittest.TestCase):
 
      def testCut(self):
           input = 'testing'
-          output = input[:4]
+         
+          output = input[n]
           final = cut(output)
           self.assertEqual(output, final)
   

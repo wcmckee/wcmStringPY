@@ -4,17 +4,18 @@ from wordpress_xmlrpc.methods.users import GetUserInfo
 import pprint
 
 PriceInfo = open('doc', 'r')
+TitleInfo = open('title', 'r')
 for Result in PriceInfo:
      pprint.pprint(Result)
 
-wp = Client('http://wcmckee.com/xmlrpc.php', 'wcmckee', 'blahblah123')
+wp = Client('http://wcmckee.com/xmlrpc.php', 'trademe', 'qwerty123')
 Posts = wp.call(GetPosts())
 for data in Posts:
      pprint.pprint(data)
 
 post = WordPressPost()
-post.title = (Result)
-post.content = ('testing 123')
+post.title = (TitleInfo)
+post.content = (Result)
 post.terms_names = {
      'post_tag': ['trademe', 'dataprocess', 'python'],
      'category': ['trademe']
