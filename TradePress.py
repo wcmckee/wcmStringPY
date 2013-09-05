@@ -8,13 +8,15 @@ TitleInfo = open('title', 'r')
 for Result in PriceInfo:
      pprint.pprint(Result)
 
+for Titles in TitleInfo:
+     pprint.pprint(Titles)
 wp = Client('http://wcmckee.com/xmlrpc.php', 'trademe', 'qwerty123')
 Posts = wp.call(GetPosts())
 for data in Posts:
      pprint.pprint(data)
 
 post = WordPressPost()
-post.title = (TitleInfo)
+post.title = (Titles)
 post.content = (Result)
 post.terms_names = {
      'post_tag': ['trademe', 'dataprocess', 'python'],
