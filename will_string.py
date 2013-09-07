@@ -4,5 +4,8 @@ def reverse(original):
 def cut(input):
       return input[:4]
 
-def Over18(age):
-      return (age - 18)
+def getUrl(tradeUrl)
+      return (
+
+def download(age):
+      return (finNum)

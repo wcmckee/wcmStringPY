@@ -1,8 +1,15 @@
 import unittest
-from will_string import reverse, cut, Over18
+from will_string import reverse, cut, download
 import string
 import requests
 import json
+
+class UrlDownload(unittest.TestCase):
+    def testDownload(self):
+         ranNum = (random.randint(1,10)
+         finNum = str(randNum)
+         self.assertGreater(self, finNum)
+         
 
 class StringTests(unittest.TestCase):
 

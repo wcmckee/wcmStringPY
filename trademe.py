@@ -10,13 +10,25 @@ def rectxt():
     numb = str(numb)
     #categ  = input('Which number: ')
     r2 = requests.get('http://api.trademe.co.nz/v1/Search/General.json?category=' + numb + '&sort_order=BidsMost')
+    artCtrl = requests.get('http://artcontrol.me/?wpapi=get_posts&dev=0')
     r3 = requests.get('http://api.trademe.co.nz/v1/Listings/Latest.json')
     j2 = json.loads(r2.text)
+    artCtrl = json.loads(artCtrl)
     j3 = json.loads(r3.text)
     #pprint(j2)  #here's the final respone, printed out nice an readable format
     #ed2 = str(j2)
     x = j2[u'List']
+    postCtrl = artCtrl[u'posts']
     #pprint(x)
+    for blogInfo in postCtrl:
+         ContentName = info['name']
+         ContentName = str(ContentName)
+
+         contentDate = info['date', 'name', 'excerpt']
+         contentDate = str(contentDate)
+         pprint(contentDate)
+        
+         
     for info in x:
          ContentPath = info[u'CategoryPath']      
          ContentPath = str(ContentPath)
@@ -35,12 +47,12 @@ def rectxt():
          ContentImage = info[u'PictureHref']
          ContentImage = str(ContentImage)
          #pprint(ContentTitle)
-         puts(colored.red(ContentTitle))
+         #puts(colored.red(ContentTitle))
          #pprint(ContentPath)
-         puts(colored.white(ContentPath))
+         #puts(colored.white(ContentPath))
          #pprint(ContentRegion)
-         puts(colored.green(ContentRegion))
-         pprint(ContentBuyNow)
+         #puts(colored.green(ContentRegion))
+         #pprint(ContentBuyNow)
          files = open('doc', 'w')
          title = open('title', 'w')
          #imagePic = open('imagePic', 'w')
