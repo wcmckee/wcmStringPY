@@ -5,11 +5,11 @@ class StringFile(self):
                       'Functional', 'Testing', 'Graphical', 'Applications',
                       'Thomi', 'Richards'],
                       (['TEST', 'ALL THE THINGS', 'A BETTER TESTING STRATEGY'])
-   
-     def stringOutput():
+              
+              pagesName = {['id',      def stringOutput():
               stringOut = 
                        ('Autopilot', 'Enter', 'Ubuntu'),('Companies public info')
-    def stringNextput():
+     def stringNextput():
               stringPost = 
                        ('There', 'is', 'no', 'way', 'im')
 

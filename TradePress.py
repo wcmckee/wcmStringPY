@@ -22,5 +22,5 @@ post.terms_names = {
      'post_tag': ['trademe', 'dataprocess', 'python'],
      'category': ['trademe']
 }
-
+post.post_status = 'publish'
 wp.call(NewPost(post)) 

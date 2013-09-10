@@ -21,8 +21,9 @@ def rectxt():
     postCtrl = artCtrl[u'posts']
     #pprint(x)
     for blogInfo in postCtrl:
-         ContentName = info['name']
+         ContentName = blogInfo['name']
          ContentName = str(ContentName)
+         
 
          contentDate = info['date', 'name', 'excerpt']
          contentDate = str(contentDate)
