@@ -5,7 +5,7 @@ import random
 from pprint import pprint
 from clint.textui import puts, colored
 
-def rectxt():
+def getTrademe():
     numb = random.randint(1,10)
     numb = str(numb)
     #categ  = input('Which number: ')
@@ -76,4 +76,4 @@ def rectxt():
          files.write(ContentImage)
          files.write('\" width=\"60\" height=\"30\" />')
          files.close()
-rectxt()
+getTrademe()
