@@ -2,9 +2,11 @@ import requests
 import string
 import json
 
+
 def getInfo():
     files = open('doc', 'w')
-    r2 = requests.get('http://www.reddit.com/r/redditgetsdrawn.json')
+    watSub = input('What subreddit? ')
+    r2 = requests.get('http://www.reddit.com/r/' + watSub + '.json')
  
     
     j2 = json.loads(r2.text)
@@ -30,20 +32,22 @@ def getInfo():
          contentAuthor = str(contentAuthor)
          
          
-         
+         titleData = open('titleData', 'w')
+         titleData.write(contentTitle)
+         titleData.close()
          redditData = open('redditdrawn', 'w')
          redditData.write('<h1><strong>')
          redditData.write(contentTitle)
-         redditData.write('</strong></h1>')
+         redditData.write('</strong></h1><p>')
          redditData.write(contentText)
          redditData.write(' Score: ')
          redditData.write(contentScore)
-         redditData.write('<img alt="" src="')
+         redditData.write('<p><img alt="" src="')
          redditData.write(contentUrl)
          redditData.write('" width="800" height="600" />')
-         redditDara.write(' <i><h3> - ')
+         redditData.write(' <i><h3> - ')
          redditData.write(contentAuthor)
          redditData.write('</i></h3>')
-         
+         redditData.close()
         
 getInfo()

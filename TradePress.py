@@ -8,6 +8,7 @@ PriceInfo = open('doc', 'r')
 TitleInfo = open('title', 'r')
 RedditInfo = open('redditdrawn', 'r')
 LordeInfo = open('LastData')
+titleData = open('titleData', 'r')
 
 for Result in PriceInfo:
      pprint.pprint(Result)
@@ -18,19 +19,19 @@ for Titles in TitleInfo:
 for Reddit in RedditInfo:
     pprint.pprint(Reddit)
 
-#for data in Posts:
- #    pprint.pprint(data)
+for data in titleData:
+    pprint.pprint(data)
 
 for Lorde in LordeInfo:
     pprint.pprint(Lorde)     
      
 Posts = wp.call(GetPosts())
 post = WordPressPost()
-post.title = (Lorde)
+post.title = (data)
 post.content = (Reddit)
 post.terms_names = {
      'post_tag': ['trademe', 'dataprocess', 'python', 
                   'reddit', 'lastfm']}
-{'category': ['trademe']}
+{'category' : ['trademe']}
 post.post_status = 'publish'
 wp.call(NewPost(post)) 
