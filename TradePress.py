@@ -7,9 +7,10 @@ wp = Client('http://wcmckee.com/xmlrpc.php', 'trademe', 'qwerty123')
 PriceInfo = open('doc', 'r')
 TitleInfo = open('title', 'r')
 RedditInfo = open('redditdrawn', 'r')
-LordeInfo = open('LastData')
+LordeInfo = open('LastData', 'r')
 titleData = open('titleData', 'r')
 
+writeContent = random
 for Result in PriceInfo:
      pprint.pprint(Result)
 
