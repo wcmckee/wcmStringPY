@@ -10,7 +10,7 @@ RedditInfo = open('redditdrawn', 'r')
 LordeInfo = open('LastData', 'r')
 titleData = open('titleData', 'r')
 
-writeContent = random
+
 for Result in PriceInfo:
      pprint.pprint(Result)
 
