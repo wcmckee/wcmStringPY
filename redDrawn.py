@@ -45,9 +45,11 @@ def getInfo():
          redditData.write('<p><img alt="" src="')
          redditData.write(contentUrl)
          redditData.write('" width="800" height="600" />')
-         redditData.write(' <i><h3> - ')
+         redditData.write('<i><h3> - <a href=\"http://reddit.com/user/')
          redditData.write(contentAuthor)
-         redditData.write('</i></h3>')
+         redditData.write('">')
+         redditData.write(contentAuthor)
+         redditData.write('</a></i></h3>')
          redditData.close()
         
 getInfo()
